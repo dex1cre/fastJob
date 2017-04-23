@@ -1,0 +1,294 @@
+{% load staticfiles %}
+
+﻿<!DOCTYPE>
+<html>
+<head>
+	<title>simple-job</title>
+	<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+	<link rel="shortcut icon" href="/favicon.png" type="image/png">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+</head>
+<body>
+<header>
+			<div class="logo">
+				<a href="#">simple-job</a>
+			</div>
+			<div class="nav_log_user">
+				<a href="#">Войти</a>
+			</div>
+	</header>
+<div class="wrapper">
+	<div class="container">
+		<div class="left_sidebar">
+			<div class="mbl_step">
+				<span>1 шаг</span>
+				<h3>Выберите категорию</h3>
+			</div>
+			<form id="findWork">
+			<aside>
+				<ul>
+					{% for perk in perks %}
+						<li>
+							<label for="radio_but{{forloop.counter}}" id="ds">{{perk.name}}</label>
+							<input type="radio" id="radio_but1" name="radio">
+						</li>
+					{% endfor %}
+				</ul>
+			</aside>
+			</form>
+			<div class="mbl_step">
+					<span>2 шаг</span>
+					<h3>Введите задание</h3>
+				</div>
+			<div class="auto_search">
+				<input form="findWork" type="checkbox" name="" id="autoSearch">
+				<label for="autoSearch">Автоматический поиск</label>
+			</div>
+
+		</div>
+		<div class="main_content">
+			<div class="search">
+				<div>
+					<textarea  id="search" placeholder="Введите задание fdh dfg dsg"></textarea>
+						<img src="{% static 'images/srch.png' %}" width="24px" height="24px">
+				</div>
+				<div>
+						<ul>
+							<li id="first_select" class="form_value_span"></li>
+							<li id="second_select" class="form_value_span">Автопоиск</li>
+						</ul>
+						<input form="findWork" type="submit" name="" value="Найти">
+				</div>
+			</div>
+			<section  class="short_block">
+				<div class="short_header">
+					<h5>Виталий Загородский</h5>
+				</div>
+				<div class="short_tags">
+					<ul>
+						<li>с++</li>
+						<li>java</li>
+						<li>контрольные</li>
+						<li>pascal</li>
+						<li>python</li>
+						<li>лабораторные работы</li>
+					</ul>
+				</div>
+			</section>
+
+			<section  class="short_block">
+				<div class="short_header">
+					<h5>Виталий Загородский</h5>
+				</div>
+				<div class="short_tags">
+					<ul>
+						<li>с++</li>
+						<li>java</li>
+						<li>с++</li>
+						<li>java</li>
+						<li>с++</li>
+						<li>java</li>
+						<li>с++</li>
+						<li>java</li>
+						<li>с++</li>
+						<li>java</li>
+						<li>с++</li>
+						<li>java</li>
+						<li>с++</li>
+						<li>java</li>
+						<li>с++</li>
+						<li>java</li>
+						<li>с++</li>
+						<li>java</li>
+					</ul>
+				</div>
+			</section>
+
+			<section  class="short_block">
+				<div class="short_header">
+					<h5>Виталий Загородский</h5>
+
+				</div>
+				<div class="short_tags">
+					<ul>
+						<li>с++</li>
+
+					</ul>
+				</div>
+			</section>
+			<section  class="short_block">
+				<div class="short_header">
+					<h5>Виталий Загородский</h5>
+					<span class="user_busy">занят</span>
+				</div>
+				<div class="short_tags">
+					<ul>
+						<li>с++</li>
+					</ul>
+				</div>
+			</section>
+			<section  class="short_block">
+				<div class="short_header">
+					<h5>Виталий Загородский</h5>
+				</div>
+				<div class="short_tags">
+					<ul>
+						<li>с++</li>
+						<li>java</li>
+						<li>контрольные</li>
+						<li>pascal</li>
+						<li>python</li>
+						<li>лабораторные работы</li>
+					</ul>
+				</div>
+			</section>
+			<section  class="short_block">
+				<div class="short_header">
+					<h5>Виталий Загородский</h5>
+				</div>
+				<div class="short_tags">
+					<ul>
+						<li>с++</li>
+						<li>java</li>
+						<li>контрольные</li>
+						<li>pascal</li>
+						<li>python</li>
+						<li>с++</li>
+						<li>java</li>
+						<li>контрольные</li>
+						<li>pascal</li>
+						<li>python</li>
+						<li>с++</li>
+						<li>java</li>
+						<li>контрольные</li>
+						<li>pascal</li>
+						<li>python</li>
+						<li>лабораторные работы</li>
+					</ul>
+				</div>
+			</section>
+			<section  class="short_block">
+				<div class="short_header">
+					<h5>Виталий Загородский</h5>
+				</div>
+				<div class="short_tags">
+					<ul>
+						<li>с++</li>
+						<li>java</li>
+						<li>контрольные</li>
+						<li>pascal</li>
+						<li>python</li>
+						<li>лабораторные работы</li>
+					</ul>
+				</div>
+			</section>
+
+
+		</div><!--content-->
+
+		<div class="right_sidebar" id="mbl_right_sidebar">
+		<button id="mbl_middle_close">CLOSE</button>
+			<div id="display_middle_block" class="middle_block">
+				<div class="middle_header">
+					<ul>
+						<li class="middle_header_info info1">4.5<span class="info1_tip window_tip left_abc"><i>Рейтинг </i> - aейтинг исполнителя формируется по его треьав</span></li>
+						<li class="middle_header_info info2">12<span class="info2_tip window_tip center_abc"><i>Рейтинг </i> - исполнителя формируется по его треьав</span></li>
+						<li class="middle_header_info info3">32<span class="info3_tip window_tip right_abc"><i>Рейтинг </i> - исполнителя формируется по его треьав</span></li>
+					</ul>
+				</div>
+				<div class="middle_tags">
+					<ul>
+						<li>
+							<h4>Physics<span>32%</span></h4>
+							<div class="static_rating">
+								<div class="change_rating">
+								</div>
+							</div>
+						</li>
+						<li>
+							<h4>Physics<span>32%</span></h4>
+							<div class="static_rating">
+								<div class="change_rating">
+								</div>
+							</div>
+						</li>
+						<li>
+							<h4>Physics<span>32%</span></h4>
+							<div class="static_rating">
+								<div class="change_rating">
+								</div>
+							</div>
+						</li>
+
+					<ul>
+					<a href="#" class="middle_btn">Перейти к исполнителю</a>
+				</div>
+			</div>
+		</div><!--right_sidebar-->
+	</div><!--coontainer-->
+
+</div>
+<div id="shadow_right_sidebar"></div>
+
+<script type="text/javascript" src="{% static 'js/jquery-1.11.3.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/window-resize.js' %}"></script>
+<script type="text/javascript">
+	jQuery(function()
+	{
+		jQuery('textarea').autoResize();
+
+		$('aside label').click(function(){
+				var current_text = this.innerText;
+				var elem = $('#first_select');
+				elem.html('');
+				$('aside label').css('color','#272727');
+				$(this).css('color','#E0282B');
+				elem.prepend(current_text).css('display','inline-block');
+		});
+
+		$('.auto_search input').change(function(){
+			if(this.checked){
+				$('#second_select').css('display','inline-block');
+			}else{
+				$('#second_select').hide();
+			}
+		});
+
+
+		$('#first_select').click(function(){
+			$(this).hide();
+			$('aside input[type="radio"]').removeAttr('checked');
+			$('aside label').css('color','#272727');
+		});
+
+		$('#second_select').click(function(){
+			$(this).hide();
+			$('.auto_search input').removeAttr('checked');
+		});
+
+		$('.short_block').click(function(){
+			if($('#mbl_right_sidebar').css("position") == 'fixed'){
+				$('#shadow_right_sidebar').fadeIn();
+			}else{
+			}
+			$('#mbl_right_sidebar').fadeIn();
+			$('#display_middle_block').fadeIn();
+		});
+
+
+		$('#mbl_middle_close').click(function(){
+			$('.right_sidebar').fadeOut();
+			$('#shadow_right_sidebar').fadeOut();
+		});
+
+		$('#shadow_right_sidebar').click(function(){
+			$('.right_sidebar').fadeOut();
+			$('#shadow_right_sidebar').fadeOut();
+		});
+
+
+	});
+</script>
+</body>
+</html>

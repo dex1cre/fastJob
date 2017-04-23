@@ -9,7 +9,7 @@ class Men(models.Model):
     status = models.IntegerField(default=0)
     z_or_isp = models.IntegerField()
 
-    def __str__(selft):
+    def __str__(self):
         return self.login + ": " + self.name + " " + self.last_name
 
 class Task(models.Model):
@@ -19,26 +19,26 @@ class Task(models.Model):
     executor = models.IntegerField()
     client = models.ForeignKey(Men)
 
-    def __str__(selft):
+    def __str__(self):
         return self.client + "-->" + self.executor + ": " +self.description[:10]
 
 class Perk(models.Model):
     name = models.CharField(max_length=200)
 
-    def __str__(selft):
+    def __str__(self):
         return self.name
 
 class Category(models.Model):
     name = models.CharField(max_length=200)
 
-    def __str__(selft):
+    def __str__(self):
         return self.name
 
 class PdCategory(models.Model):
     cat = models.ForeignKey(Category)
     perk = models.ForeignKey(Perk)
 
-    def __str__(selft):
+    def __str__(self):
         return self.cat + "-->" + self.perk
 
 class UserPerk(models.Model):
@@ -46,5 +46,5 @@ class UserPerk(models.Model):
     perk = models.ForeignKey(Perk)
     percent = models.IntegerField(default=0)
 
-    def __str__(selft):
-        return self.user + "-->" + self.perk + ": " + self.percent + "%"
+    def __str__(self):
+        return str(self.user) + "-->" + str(self.perk) + ": " + str(self.percent) + "%"
